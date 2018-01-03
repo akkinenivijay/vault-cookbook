@@ -9,6 +9,7 @@ RuntimeDirectory=vault
 ExecStart=<%= @command %>
 ExecReload=/bin/kill -<%= @reload_signal %> $MAINPID
 KillSignal=<%= @stop_signal %>
+LimitMEMLOCK=infinity
 User=<%= @user %>
 WorkingDirectory=<%= @directory %>
 
