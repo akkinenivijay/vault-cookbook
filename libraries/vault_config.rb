@@ -77,7 +77,7 @@ module VaultCookbook
           config_keeps.include?(k.to_sym)
         end
         # listener
-        listener_keeps = tls? ? %i(address cluster_address proxy_protocol_behavior proxy_protocol_authorized_addrs tls_cert_file tls_key_file tls_min_version tls_cipher_suites tls_prefer_server_cipher_suites tls_require_and_verify_client_cert tls_client_ca_file) : %i(address cluster_address proxy_protocol_behavior proxy_protocol_authorized_addrs)
+        listener_keeps = %i(address cluster_address proxy_protocol_behavior proxy_protocol_authorized_addrs tls_cert_file tls_key_file tls_min_version tls_cipher_suites tls_prefer_server_cipher_suites tls_require_and_verify_client_cert tls_client_ca_file)
         puts listener_keeps
         # listener_keeps = %i(address cluster_address proxy_protocol_behavior proxy_protocol_authorized_addrs)
         # tls_params = %i(tls_cert_file tls_key_file tls_min_version tls_cipher_suites tls_prefer_server_cipher_suites tls_require_and_verify_client_cert tls_client_ca_file)
